@@ -9,6 +9,9 @@ module.exports = {
         'gradient-start': '#ff69b4',
         'gradient-end': '#9370db',
       },
+      fontFamily: {
+        'berust': ['Berust', 'sans-serif'],
+      },
     },
   },
   plugins: [],
