@@ -7,6 +7,19 @@
     <title>Vite + React</title>
   </head>
   <body>
+    <script>
+      let isScrolling;
+      window.addEventListener('scroll', function() {
+          document.body.classList.add('is-scrolling');
+          console.log('Scrolling started', document.body.classList.contains('is-scrolling'));
+          
+          clearTimeout(isScrolling);
+          isScrolling = setTimeout(function() {
+              document.body.classList.remove('is-scrolling');
+              console.log('Scrolling stopped', document.body.classList.contains('is-scrolling'));
+          }, 500);
+      });
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
